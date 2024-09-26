@@ -5,13 +5,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "fmt": "npx prettier . --write",
-    "check": "npx prettier . --check"
+    "check": "npx prettier . --check",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "description": "",
   "devDependencies": {
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
